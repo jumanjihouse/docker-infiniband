@@ -1,0 +1,32 @@
+#!/bin/sh
+
+. test/vars.bash
+
+rm -f test/05_packages.bats
+for rpm in ${CENTOS_RPMS}; do
+  cat >> test/05_packages.bats <<EOF
+@test "image should contain package \"${rpm}\"" {
+  echo ${IMAGE}:\${version}
+  run docker run ${IMAGE}:\${version} rpm -q ${rpm}
+  [ \${status} -eq 0 ]
+}
+
+EOF
+done
+
+rm -f test/10_commands.bats
+for cmd in ${COMMANDS}; do
+  cat >> test/10_commands.bats <<EOF
+@test "command should be in path: \"${cmd}\"" {
+  run docker run ${IMAGE}:\${version} bash -c "command -v ibdiagnet"
+  [ \${status} -eq 0 ]
+}
+EOF
+done
+
+for version in ${CENTOS_VERSIONS}; do
+  echo
+  echo '=====>' ${IMAGE}:${version}
+  export version
+  bats test/*.bats
+done

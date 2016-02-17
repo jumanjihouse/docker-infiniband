@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+. test/vars.bash
+
+for version in ${CENTOS_VERSIONS}; do
+  tag="${IMAGE}:${version}"
+  echo
+  echo '=====>' ${tag} >&2
+  sed -e "s/CENTOS_VERSION/${version}/g" -e "s/CENTOS_RPMS/${CENTOS_RPMS}/g" Dockerfile.in | docker build --rm -t ${tag} -
+done
+
+echo
+echo '=====> Images' >&2
+docker images | grep infiniband

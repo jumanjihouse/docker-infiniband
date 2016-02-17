@@ -1,2 +1,4 @@
 *~
 *.swp
+test/05_packages.bats
+test/10_commands.bats
