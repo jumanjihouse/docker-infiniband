@@ -24,7 +24,9 @@ test:
   pre:
     - script/build
   override:
+    - docker images
     - script/test
+    - echo ${TAG_BASE}
 
 # https://circleci.com/docs/configuration#deployment
 # https://circleci.com/docs/environment-variables
@@ -36,6 +38,8 @@ deployment:
       - docker login -e ${mail} -u ${user} -p ${pass}
       - docker tag jumanjiman/infiniband:6 jumanjiman/infiniband:6-${TAG_BASE}
       - docker tag jumanjiman/infiniband:7 jumanjiman/infiniband:7-${TAG_BASE}
+      - echo ${TAG_BASE}
+      - docker images
       - docker push jumanjiman/infiniband:6-${TAG_BASE}
       - docker push jumanjiman/infiniband:7-${TAG_BASE}
       - docker push jumanjiman/infiniband:6
