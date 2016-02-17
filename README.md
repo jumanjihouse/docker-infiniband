@@ -2,6 +2,11 @@ Infiniband base image
 =====================
 
 
+[![Image Size](https://img.shields.io/imagelayers/image-size/jumanjiman/infiniband/latest.svg)](https://imagelayers.io/?images=jumanjiman/infiniband:latest 'View image size and layers')&nbsp;
+[![Image Layers](https://img.shields.io/imagelayers/layers/jumanjiman/infiniband/latest.svg)](https://imagelayers.io/?images=jumanjiman/infiniband:latest 'View image size and layers')&nbsp;
+[![Docker Registry](https://img.shields.io/docker/pulls/jumanjiman/infiniband.svg)](https://registry.hub.docker.com/u/jumanjiman/infiniband)&nbsp;
+[![Circle CI](https://circleci.com/gh/jumanjihouse/docker-infiniband.png?circle-token=1b2edb8b3686250c5116786aaf8f87e22b257d84)](https://circleci.com/gh/jumanjihouse/docker-infiniband/tree/master 'View CI builds')
+
 Project URL: [https://github.com/jumanjihouse/docker-infiniband](https://github.com/jumanjihouse/docker-infiniband)
 <br />
 Docker hub: [https://registry.hub.docker.com/u/jumanjiman/infiniband/](https://registry.hub.docker.com/u/jumanjiman/infiniband/)
