@@ -13,6 +13,7 @@ mstflint
 opensm
 patch
 qperf
+pciutils
 "
 
 # Change newlines into spaces for `sed'.
