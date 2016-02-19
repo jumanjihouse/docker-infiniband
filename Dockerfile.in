@@ -1,3 +1,16 @@
 FROM centos:CENTOS_VERSION
 
 RUN yum -y install CENTOS_RPMS && yum clean all
+
+# http://www.mellanox.com/page/mlxup_firmware_tool
+#
+# mlxup - a Mellanox firmware update and query utility.
+# The utility enables scanning the server machine for
+# available Mellanox adapters and indicates
+# whether firmware update is required for each adapter.
+# To make it easier for customers the mlxup can also
+# automatically update the latest firmware either from the web,
+# or use binaries provided locally.
+#
+ADD http://www.mellanox.com/downloads/firmware/mlxup/4.1.0/linux_x64/mlxup /usr/sbin/mlxup
+RUN chmod 0755 /usr/sbin/mlxup
