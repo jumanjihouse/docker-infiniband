@@ -22,9 +22,11 @@ dependencies:
 
 test:
   pre:
+    - echo ${TAG_BASE}
     - script/build
   override:
     - script/test
+    - echo ${TAG_BASE}
 
 # https://circleci.com/docs/configuration#deployment
 # https://circleci.com/docs/environment-variables
@@ -48,8 +50,10 @@ deployment:
     commands:
       # Publish the image with TAG2 so user can smoke-test manually on an IB host.
       - docker login -e ${mail} -u ${user} -p ${pass}
+      - echo ${TAG_BASE}
       - docker tag jumanjiman/infiniband:6 jumanjiman/infiniband:6-${TAG_BASE2}
       - docker tag jumanjiman/infiniband:7 jumanjiman/infiniband:7-${TAG_BASE2}
       - docker push jumanjiman/infiniband:6-${TAG_BASE2}
       - docker push jumanjiman/infiniband:7-${TAG_BASE2}
+      - echo ${TAG_BASE}
       - docker logout
