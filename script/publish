@@ -1,5 +1,5 @@
 #!/bin/sh
-set -ex
+set -e
 
 docker login -e ${mail} -u ${user} -p ${pass}
 docker tag jumanjiman/infiniband:6 jumanjiman/infiniband:6-${1}
