@@ -1,6 +1,8 @@
 FROM centos:CENTOS_VERSION
 
-RUN yum -y install CENTOS_RPMS && yum clean all
+RUN yum -y install CENTOS_RPMS && \
+    yum -y update && \
+    yum clean all
 
 # http://www.mellanox.com/page/mlxup_firmware_tool
 #
