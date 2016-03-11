@@ -1,7 +1,8 @@
 # https://circleci.com/docs/docker
 machine:
   environment:
-    TAG_BASE: $(date +%Y%m%dT%H%M)-git-${CIRCLE_SHA1:0:7}
+    DATE: $(date +%Y%m%dT%H%M)
+    TAG_BASE: ${DATE}-git-${CIRCLE_SHA1:0:7}
     TAG_BASE2: ${CIRCLE_PR_USERNAME}_${CIRCLE_BRANCH/\//_}
     BATS_VER: 0.4.0
   services:
