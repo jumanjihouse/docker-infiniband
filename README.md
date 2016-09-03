@@ -2,8 +2,9 @@ Infiniband base image
 =====================
 
 
-[![Image Size](https://img.shields.io/imagelayers/image-size/jumanjiman/infiniband/latest.svg)](https://imagelayers.io/?images=jumanjiman/infiniband:latest 'View image size and layers')&nbsp;
-[![Image Layers](https://img.shields.io/imagelayers/layers/jumanjiman/infiniband/latest.svg)](https://imagelayers.io/?images=jumanjiman/infiniband:latest 'View image size and layers')&nbsp;
+[![download size](https://images.microbadger.com/badges/image/jumanjiman/infiniband.svg)](http://microbadger.com/images/jumanjiman/infiniband "View on microbadger.com")
+[![version](https://images.microbadger.com/badges/version/jumanjiman/infiniband.svg)](http://microbadger.com/images/jumanjiman/infiniband "View on microbadger.com")
+[![license](https://images.microbadger.com/badges/license/jumanjiman/infiniband.svg)](http://microbadger.com/images/jumanjiman/infiniband "View on microbadger.com")
 [![Docker Registry](https://img.shields.io/docker/pulls/jumanjiman/infiniband.svg)](https://registry.hub.docker.com/u/jumanjiman/infiniband)&nbsp;
 [![Circle CI](https://circleci.com/gh/jumanjihouse/docker-infiniband.png?circle-token=1b2edb8b3686250c5116786aaf8f87e22b257d84)](https://circleci.com/gh/jumanjihouse/docker-infiniband/tree/master 'View CI builds')
 
@@ -35,6 +36,8 @@ How-to
 
 
 ### Build locally
+
+:warning: Build requires Docker 1.9.0 or higher for `--build-arg`.
 
 On a host with Docker:
 

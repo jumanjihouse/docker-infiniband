@@ -1,5 +1,20 @@
 FROM centos:CENTOS_VERSION
 
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION=CENTOS_VERSION
+
+LABEL \
+    org.label-schema.name="jumanjiman/infiniband" \
+    org.label-schema.description="Infiniband base image based on Centos" \
+    org.label-schema.url="https://github.com/jumanjihouse/docker-infiniband" \
+    org.label-schema.vcs-url="https://github.com/jumanjihouse/docker-infiniband.git" \
+    org.label-schema.docker.dockerfile="/Dockerfile.in" \
+    org.label-schema.vcs-type="Git" \
+    org.label-schema.build-date=$BUILD_DATE \
+    org.label-schema.vcs-ref=$VCS_REF \
+    org.label-schema.version=$VERSION
+
 RUN yum -y install CENTOS_RPMS && \
     yum -y update && \
     yum clean all

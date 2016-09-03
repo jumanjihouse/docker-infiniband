@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 . test/vars.bash
@@ -7,7 +7,11 @@ for version in ${CENTOS_VERSIONS}; do
   tag="${IMAGE}:${version}"
   echo
   echo '=====>' ${tag} >&2
-  sed -e "s/CENTOS_VERSION/${version}/g" -e "s/CENTOS_RPMS/${CENTOS_RPMS}/g" Dockerfile.in | docker build --rm -t ${tag} -
+  build_args="
+    --build-arg BUILD_DATE=$(date +%Y%m%dT%H%M)
+    --build-arg VCS_REF=${CIRCLE_SHA1:0:7}
+  "
+  sed -e "s/CENTOS_VERSION/${version}/g" -e "s/CENTOS_RPMS/${CENTOS_RPMS}/g" Dockerfile.in | docker build ${build_args} --rm -t ${tag} -
 done
 
 echo
