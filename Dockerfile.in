@@ -14,5 +14,5 @@ RUN yum -y install CENTOS_RPMS && \
 # automatically update the latest firmware either from the web,
 # or use binaries provided locally.
 #
-ADD http://www.mellanox.com/downloads/firmware/mlxup/4.1.0/linux_x64/mlxup /usr/sbin/mlxup
+ADD http://www.mellanox.com/downloads/firmware/mlxup/4.4.0/linux_x64/mlxup /usr/sbin/mlxup
 RUN chmod 0755 /usr/sbin/mlxup
