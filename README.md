@@ -41,7 +41,7 @@ How-to
 
 On a host with Docker:
 
-    script/build
+    ci/build
 
 
 ### Pull an already-built image
@@ -108,7 +108,7 @@ Sample output from `ibnetdiscover` (one of the utils) is shown at
 
 Run the test harness:
 
-    script/test
+    ci/test
 
 The test harness requires [BATS](https://github.com/sstephenson/bats).
 
