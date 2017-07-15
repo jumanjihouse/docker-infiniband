@@ -5,7 +5,7 @@ Infiniband base image
 [![download size](https://images.microbadger.com/badges/image/jumanjiman/infiniband.svg)](http://microbadger.com/images/jumanjiman/infiniband "View on microbadger.com")
 [![version](https://images.microbadger.com/badges/version/jumanjiman/infiniband.svg)](http://microbadger.com/images/jumanjiman/infiniband "View on microbadger.com")
 [![license](https://images.microbadger.com/badges/license/jumanjiman/infiniband.svg)](http://microbadger.com/images/jumanjiman/infiniband "View on microbadger.com")
-[![Docker Registry](https://img.shields.io/docker/pulls/jumanjiman/infiniband.svg)](https://registry.hub.docker.com/u/jumanjiman/infiniband)&nbsp;
+[![Docker Registry](https://img.shields.io/docker/pulls/jumanjiman/infiniband.svg)](https://registry.hub.docker.com/u/jumanjiman/infiniband/)&nbsp;
 [![Circle CI](https://circleci.com/gh/jumanjihouse/docker-infiniband.png?circle-token=1b2edb8b3686250c5116786aaf8f87e22b257d84)](https://circleci.com/gh/jumanjihouse/docker-infiniband/tree/master 'View CI builds')
 
 Project URL: [https://github.com/jumanjihouse/docker-infiniband](https://github.com/jumanjihouse/docker-infiniband)
