@@ -1,13 +1,17 @@
 #!/bin/sh
 set -e
 
-docker login -e ${mail} -u ${user} -p ${pass}
-docker tag jumanjiman/infiniband:6 jumanjiman/infiniband:6-${1}
-docker tag jumanjiman/infiniband:7 jumanjiman/infiniband:7-${1}
-docker push jumanjiman/infiniband:6-${1}
-docker push jumanjiman/infiniband:7-${1}
+. ci/vars
+
+docker login -u ${user} -p ${pass}
+docker tag jumanjiman/infiniband:6 jumanjiman/infiniband:6-${TAG_BASE}
+docker tag jumanjiman/infiniband:7 jumanjiman/infiniband:7-${TAG_BASE}
+docker push jumanjiman/infiniband:6-${TAG_BASE}
+docker push jumanjiman/infiniband:7-${TAG_BASE}
 docker push jumanjiman/infiniband:6
 docker push jumanjiman/infiniband:7
 docker tag jumanjiman/infiniband:7 jumanjiman/infiniband:latest
 docker push jumanjiman/infiniband:latest
 docker logout
+
+curl -X POST 'https://hooks.microbadger.com/images/jumanjiman/infiniband/xF6-vQS-SpyJgR0_U-z1hVDUdC8='
