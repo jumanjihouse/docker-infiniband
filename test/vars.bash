@@ -1,3 +1,6 @@
+# shellcheck shell=bash
+# shellcheck disable=SC2034
+
 CENTOS_VERSIONS="6 7"
 
 CENTOS_RPMS="
@@ -17,7 +20,7 @@ pciutils
 "
 
 # Change newlines into spaces for `sed'.
-CENTOS_RPMS="$( echo ${CENTOS_RPMS} | tr '\n' ' ')"
+CENTOS_RPMS="$(echo "${CENTOS_RPMS}" | tr '\n' ' ')"
 
 COMMANDS="
 ibdiagnet

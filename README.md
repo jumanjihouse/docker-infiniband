@@ -12,6 +12,16 @@ Project URL: [https://github.com/jumanjihouse/docker-infiniband](https://github.
 <br />
 Docker hub: [https://registry.hub.docker.com/u/jumanjiman/infiniband/](https://registry.hub.docker.com/u/jumanjiman/infiniband/)
 
+- [Overview](#overview)
+  - [Build integrity](#build-integrity)
+- [How-to](#how-to)
+  - [Build locally](#build-locally)
+  - [Pull an already-built image](#pull-an-already-built-image)
+  - [Run an image](#run-an-image)
+  - [Run diagnostics](#run-diagnostics)
+  - [Test](#test)
+- [License](#license)
+
 
 Overview
 --------
@@ -110,7 +120,10 @@ Run the test harness:
 
     ci/test
 
-The test harness requires [BATS](https://github.com/sstephenson/bats).
+The test harness requires:
+
+* [BATS](https://github.com/bats-core/bats-core)
+* Python and the `pip` command
 
 :warning: I need to figure out how to run acceptance tests
 on a host without infiniband devices (such as CircleCI).
