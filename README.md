@@ -64,12 +64,10 @@ If all tests pass on master branch, then the image is pushed into the docker hub
 Tags:
 
 * Optimistic
-  - `jumanjiman/infiniband:6`
   - `jumanjiman/infiniband:7`
   - `jumanjiman/infiniband:latest` (same as `jumanjiman/infiniband:7`)
 
 * Pessimistic
-  - `jumanjiman/infiniband:6-${build_date_time}-${git_hash}`
   - `jumanjiman/infiniband:7-${build_date_time}-${git_hash}`
 
 We push the tags automatically from the test harness, and

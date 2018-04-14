@@ -1,14 +1,14 @@
 # shellcheck shell=bash
 # shellcheck disable=SC2034
 
-CENTOS_VERSIONS="6 7"
+CENTOS_VERSIONS="7"
 
 CENTOS_RPMS="
 compat-dapl compat-dapl-utils
 dapl dapl-utils
 ibutils
 infiniband-diags
-infinipath-psm libcxgb3 libcxgb4 libipathverbs libmthca libmlx4 libmlx5 libnes libocrdma
+infinipath-psm
 libibcommon
 libibverbs libibverbs-utils
 librdmacm-utils ibacm
